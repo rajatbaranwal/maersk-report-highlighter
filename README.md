@@ -39,13 +39,6 @@ react-pdf v6.2.2
 pdfjs-dist v2.14.305
 (Chosen because latest versions break compatibility with CRA)
 
-🛠️ Tech Stack
-Technology	Purpose
-React.js	Application UI
-react-pdf	Render PDF pages
-pdfjs-dist	PDF parsing/worker
-CSS	Layout and styling
-Vercel	Deployment
 
 📁 Project Structure
 
