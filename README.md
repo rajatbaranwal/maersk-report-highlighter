@@ -1,70 +1,95 @@
-# Getting Started with Create React App
+📘 Maersk Report Highlighter
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React-based PDF reference highlighter built for the Maersk Q2 2025 Case Study assignment.
+The application loads the official Maersk Q2 2025 Interim Report, displays all pages, and allows users to click on inline references (e.g., [3]) which automatically:
 
-## Available Scripts
+Scroll to the correct page
 
-In the project directory, you can run:
+Highlight the relevant section/page
 
-### `npm start`
+This improves readability and enables quick navigation inside dense financial documents.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+🚀 Features
+📄 Full PDF Viewer
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Renders all pages of the Maersk Q2 2025 report using react-pdf.
 
-### `npm test`
+Smooth scrolling enabled for long reports.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+🔗 Clickable References
 
-### `npm run build`
+Clicking [3] auto-scrolls to Page 15.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+✨ Highlight System
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The corresponding page gets automatically highlighted for 3 seconds.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Helps reviewers instantly locate referenced content.
 
-### `npm run eject`
+🎯 Clean & Maintainable Code
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Uses React hooks (useState, useRef).
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Works reliably on deployment (Vercel / Netlify).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+📦 Compatible Setup
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+react-pdf v6.2.2
 
-## Learn More
+pdfjs-dist v2.14.305
+(Chosen because latest versions break compatibility with CRA)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+🛠️ Tech Stack
+Technology	Purpose
+React.js	Application UI
+react-pdf	Render PDF pages
+pdfjs-dist	PDF parsing/worker
+CSS	Layout and styling
+Vercel	Deployment
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+📁 Project Structure
 
-### Code Splitting
+maersk-report-highlighter/
+│
+├── public/
+│   └── pdfs/
+│       └── maersk.pdf   ← required PDF file
+│
+├── src/
+│   ├── App.js
+│   ├── App.css
+│   ├── index.js
+│   └── components/ (optional future structure)
+│
+└── README.md
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+📄 PDF Used
 
-### Analyzing the Bundle Size
+The application uses the official:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Maersk Q2 2025 Interim Report
 
-### Making a Progressive Web App
+File location: public/pdfs/maersk.pdf
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+🧑‍💻 How to Run Locally
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Clone the repository:
 
-### Deployment
+git clone https://github.com/rajatbaranwal/maersk-report-highlighter.git
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
+Install dependencies:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+npm install
+
+
+Start development server:
+
+npm start
+
+
+Open:
+
+http://localhost:3000
+
